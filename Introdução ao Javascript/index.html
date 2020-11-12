@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body onload="load()">
+
+    <h1>Minha página</h1>
+
+    <button type="button" onclick="clicado()">Clique aqui</button>
+
+    <h3 id="obrigada" onclick="redirect()"></h3>
+
+    <h3 id="mousemuda" onmouseover="mudar()" onmouseout="voltar()">Passe o mouse aqui</h3>
+
+    <h3 id="outromouse" onmouseover="outroMudar(this)" onmouseout="outroVoltar(this)">Passe o mouse aqui também</h3>
+
+    <select onchange="change(this)">
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+    </select>
+
+    <script src="Aula05.js"></script>
+
+</body>
+</html>
