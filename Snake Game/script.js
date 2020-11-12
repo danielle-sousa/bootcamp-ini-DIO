@@ -47,11 +47,20 @@ function update(event) {
 
 //função que inicia o jogo
 function iniciarJogo() {
+
     //fazendo a cobrinha "atravessar" as paredes
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
     if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
     if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+
+     //definindo se a cobrinha encosta no próprio corpo
+     for(i = 1; i < snake.length; i++){
+        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+            clearInterval(jogo);
+            alert('Game Over :(');
+        }
+    }
 
     criarBG();
     criarCobrinha();
@@ -74,8 +83,6 @@ function iniciarJogo() {
     else{food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
     }
-
-    
     
     let newHead = {
         x: snakeX,
