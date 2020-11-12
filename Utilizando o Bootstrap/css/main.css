@@ -1,0 +1,15 @@
+body {
+    color: #262626;
+}
+
+.navbar, .footer {
+    background-color: #32a89b;
+}
+
+.sobre, .servicos {
+    background-color: #ebf5f4;
+}
+
+.parceiros {
+    background-color: #1e7696;
+}
